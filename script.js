@@ -1,24 +1,39 @@
 const questions = [
-  { text: "친구가 주말에 여행 가자고 했지만, 나는 미리 정해진 약속을 지키기 위해 거절했다.", value: "God" },
-  { text: "많은 사람이 나의 게시물을 보고 반응해줄 때 기분이 정말 좋아진다.", value: "Honor" },
-  { text: "어려운 친구에게 도움을 주고 난 후, 오히려 내가 더 큰 기쁨을 느낄 때가 있다.", value: "Neighbor" },
-  { text: "내가 가진 것을 나누면 손해 보는 느낌이 들어 꺼려진다.", value: "Money" },
-  { text: "부모님의 기대와 다르게 내 길을 선택하려 할 때, 갈등이 생긴다.", value: "Family" },
-  { text: "팀 과제에서 내 이름이 빠지면 서운하고 억울한 마음이 든다.", value: "Honor" },
-  { text: "경제적으로 여유가 있다면 내 삶이 더 자유롭고 행복할 것 같다.", value: "Money" },
-  { text: "가끔은 주일예배보다 친구들과의 모임이 더 끌릴 때가 있다.", value: "God" },
-  { text: "남들이 나를 어떻게 볼까 하는 생각을 자주 한다.", value: "Honor" },
-  { text: "내게 힘든 일이 생기면 제일 먼저 가족이 떠오른다.", value: "Family" },
-  { text: "내가 잘되는 것이 가장 중요하다고 생각한다.", value: "World" },
-  { text: "나보다 더 부족한 친구를 보면 도와주고 싶은 마음이 든다.", value: "Neighbor" },
-  { text: "돈이 많으면 하고 싶은 일도, 나누는 일도 더 쉽게 할 수 있다.", value: "Money" },
-  { text: "나를 인정해주는 사람들 앞에서는 더 열심히 하게 된다.", value: "Honor" },
-  { text: "세상에서 성공한 사람들의 이야기를 들으면 나도 그런 삶을 꿈꾸게 된다.", value: "World" },
-  { text: "하루 중 가장 평안한 시간은 하나님과 대화할 때이다.", value: "God" },
-  { text: "가족과 보내는 시간이 늘 즐겁지는 않지만, 그래도 중요하다고 생각한다.", value: "Family" },
-  { text: "누군가 어려운 일을 겪고 있을 때, 내가 도울 수 있는 일이 무엇인지 고민한다.", value: "Neighbor" },
-  { text: "내가 가진 목표를 위해서라면 어느 정도의 경쟁은 괜찮다고 생각한다.", value: "World" },
-  { text: "내가 하나님을 믿는다는 사실을 주변 사람들에게 드러내는 것이 조금은 부담스럽다.", value: "God" }
+  { text: "칭찬을 들으면 더 열심히 하게 된다.", value: "Honor" },
+  { text: "연애를 통해 나를 더 잘 알게 되는 것 같다.", value: "Romance" },
+  { text: "하나님과의 관계가 삶의 중심에 있다고 느낀다.", value: "God" },
+  { text: "부자가 되면 진짜 자유로워질 수 있을 것 같다.", value: "Money" },
+  { text: "친구가 힘들어할 때 도와주고 싶은 마음이 든다.", value: "Relationship" },
+
+  { text: "나답게 사는 것이 인생에서 가장 중요하다고 느낀다.", value: "Self" },
+  { text: "내가 원하는 걸 사지 못하면 자존감이 낮아지는 것 같다.", value: "Money" },
+  { text: "다른 사람보다 잘해야 내 가치를 느낄 수 있다.", value: "Honor" },
+  { text: "연애는 삶에서 중요한 감정 경험이라고 생각한다.", value: "Romance" },
+  { text: "내가 하는 모든 선택에 하나님의 뜻을 고려하려고 한다.", value: "God" },
+
+  { text: "경쟁을 통해 더 나은 사람이 될 수 있다고 믿는다.", value: "Self" },
+  { text: "다른 사람을 위해 내 시간을 희생하는 게 의미 있다고 느낀다.", value: "Relationship" },
+  { text: "돈 때문에 꿈을 포기하거나 바꿔야 할 것 같다고 느낀 적이 있다.", value: "Money" },
+  { text: "이성 친구와의 관계가 삶의 만족도에 큰 영향을 미친다.", value: "Romance" },
+  { text: "예배나 기도를 드릴 때 마음이 평안해진다.", value: "God" },
+
+  { text: "주변 사람들과의 관계가 삶의 행복에 중요한 요소라고 느낀다.", value: "Relationship" },
+  { text: "친구들 사이에서 인정받고 싶다는 생각이 자주 든다.", value: "Honor" },
+  { text: "내가 원하는 삶을 살기 위해 노력하고 있다.", value: "Self" },
+  { text: "연애를 하면 외로움이 줄어든다고 생각한다.", value: "Romance" },
+  { text: "모르는 사람이라도 도움이 필요하면 도와주려고 한다.", value: "Relationship" },
+
+  { text: "돈을 많이 버는 직업이 좋은 직업이라고 생각한다.", value: "Money" },
+  { text: "내가 다른 사람보다 나 자신을 더 우선시해야 한다고 생각한다.", value: "Self" },
+  { text: "내 신앙을 주변 사람들에게 자연스럽게 드러낼 수 있다.", value: "God" },
+  { text: "SNS에 올린 게시물의 반응이 나에게 큰 영향을 준다.", value: "Honor" },
+  { text: "연애로 인해 다른 일에 집중하기 어려워질 때가 있다.", value: "Romance" },
+
+  { text: "친구들이 나를 필요로 하면 기분이 좋아진다.", value: "Relationship" },
+  { text: "실패하면 다른 사람들에게 창피할까 봐 걱정된다.", value: "Honor" },
+  { text: "친구들과의 관계보다 하나님과의 관계가 더 중요하다고 느낀다.", value: "God" },
+  { text: "나의 목표를 이루는 것이 가장 중요하다.", value: "Self" },
+  { text: "돈이 많으면 친구도 더 생길 것 같다.", value: "Money" }
 ];
 
 const choices = ["매우 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"];
@@ -47,7 +62,7 @@ questions.forEach((q, index) => {
 document.getElementById('submit-btn').addEventListener('click', () => {
   event.preventDefault();
   const formData = new FormData(quizForm);
-  const scores = { God: [], World: [], Neighbor: [], Family: [], Money: [], Honor: [] };
+  const scores = { God: [], Romance: [], Self: [], Relationship: [], Money: [], Honor: [] };
 
   questions.forEach((q, i) => {
     const val = parseInt(formData.get(`q${i}`));
